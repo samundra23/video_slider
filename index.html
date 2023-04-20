@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+    <a href="#" class="brand">Travel</a>
+    <div class="menu btn"></div>
+
+        <div class="navigation">
+            <div class="navigation-item">
+                <a href="#" >Home</a>
+                <a href="#">About</a>
+                <a href="#">Explore</a>
+                <a href="#">Gallery</a>
+                <a href="#">Contact</a>
+
+            </div>
+        </div>
+    </header>
+    <section class="home">
+        <video src="assets/pexels-aric-shelby-3173312-3840x2160-30fps.mp4" class="video-slide" autoplay muted loop></video>
+        <video src="assets/pexels-enrique-hoyos-3571264-3840x2160-30fps.mp4" class="video-slide" autoplay muted loop></video>
+        <video src="assets/pexels-peter-fowler-6394054-4096x2048-24fps.mp4" class="video-slide" autoplay muted loop></video>
+        <video src="assets/pexels-taryn-elliott-3015510-1920x1080-24fps.mp4" class="video-slide" autoplay muted loop></video>
+        <video src="assets/pexels-taryn-elliott-8820216-3840x2160-25fps.mp4" class="video-slide" autoplay muted loop></video>
+
+        
+        
+        <div class="content">
+            <h1>Wonderful <br><span>island</span></h1>
+          <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.Adipisci corrupti tempore unde mollitia porro odio atque repellat, animi debitis quisquam rerum distinctio! Doloremque, laboriosam tenetur? Exercitationem doloribus labore tempore illum.</p>
+            <a href="#">Read More</a>
+            </div>
+            <div class="media-icon">
+                <a href="#"> <i class="fab fa-facebook-f"></i></a>
+                <a href="#"> <i class="fab fa-instagram"></i></a>
+                <a href="#"> <i class="fab fa-twitter"></i></a>
+
+            </div>
+    <div class="slider-navigation">
+        <div class="nab-ntn"></div>
+        <div class="nab-ntn"></div>
+        <div class="nab-ntn"></div>
+        <div class="nab-ntn"></div>
+        <div class="nab-ntn"></div>
+
+
+
+
+    </div>
+    </section>
+    ,<script type="text/javascript">
+        //video slider
+        const ntns = document.querySelectorAll(".nab-ntn");
+        const slides= document.querySelectorAll(".video-slide");
+
+
+        var sliderNav = function(manual){
+            ntns.forEach((btn) =>   {
+                btn.classList.remove("active");
+            });
+
+            slides.forEach((slide) =>   {
+                slide.classList.remove("active");
+            });
+
+
+
+            ntns[manual].classList.add("active");
+            slides[manual].classList.add("active");
+
+        }
+        ntns.forEach((btn, i) => {
+            btn.addEventListener("click", () =>{
+                sliderNav(i);
+            });
+        });
+    </script>
+    
+</body>
+</html>
